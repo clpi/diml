@@ -1,0 +1,32 @@
+[package]
+name = "diml"
+version = "0.1.0"
+authors = ["Chris P <chrisp1877@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path="src/lib.rs"
+
+[[bin]]
+name="main"
+path="src/bin/main.rs"
+
+[[bin]]
+name="test"
+path="src/bin/test.rs"
+
+[dependencies]
+rand="*"
+rayon="*"
+#ring="*"
+crossbeam="*"
+petgraph="*"
+
+[dev-dependencies]
+log="*"
+env_logger="*"
+
+[alias]
+rbm = "run --bin main"
+rbt = "run --bin test"
